@@ -20,6 +20,13 @@
     }
     .formContainer {
         flex: 1;
+        position: relative;
+        .phoneSvg {
+            // background-color: rebeccapurple;
+            stroke: orange;
+            position: absolute;
+            margin: auto;
+        }
         form {
             display: flex;
             flex-direction: column;
