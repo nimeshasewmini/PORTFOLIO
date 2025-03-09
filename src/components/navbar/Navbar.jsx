@@ -20,7 +20,7 @@ const Navbar = () => {
                 <a href="#"><img src="/youtube.png" alt="" /></a>
                 <a href="#"><img src="/linkdin.png" alt="" /></a>
                 <a href="#"><img src="/medium.png" alt="" /></a>
-                <a href="#"><img src="/github.jpg" alt="" /></a>
+                <a href="#"><img src="/github.png" alt="" /></a>
             </div>
         </div>
     </div>

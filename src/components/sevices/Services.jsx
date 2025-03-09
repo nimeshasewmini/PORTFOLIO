@@ -5,12 +5,12 @@ import { motion,useInView } from "framer-motion";
 const variants={
     initial:{
         x:-500,
-        y:7,
+        y:100,
         opacity:0,
     },
     animate:{
         x:0,
-        y:7,
+        y:0,
         opacity:1,
         transition:{
             duration:1,
@@ -24,7 +24,7 @@ const Services = () => {
 
   const ref = useRef()
 
-  const isInView = useInView(ref, {margin:"-10px"})
+  const isInView = useInView(ref, {margin:"-100px"})
   return (
     <motion.div 
     className="services" 
@@ -33,7 +33,7 @@ const Services = () => {
     //animate="animate"
     //whileInView="animate"
     ref={ref}
-    animate={isInView && "animate"}
+    animate={"animate"}
     >
         <motion.div className="textContainer" variants={variants}>
             <p>I focus on helping your brand grow
@@ -97,7 +97,7 @@ const Services = () => {
         </motion.div>
 
         </motion.div>
-  )
-}
+  );
+};
 
-export default Services
+export default Services  

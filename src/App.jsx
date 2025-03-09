@@ -6,9 +6,12 @@ import Parallax from "./components/Parallax/Parallax";
 import Services from "./components/sevices/Services";
 import Portfolio from "./components/portfolio/Portfolio";
 import Contact from "./components/contact/Contact";
+import Cursor from "./components/cursor/Cursor";
 
 const App = () => {
-  return <div>
+  return (
+    <div>
+          <Cursor/>
     <section id="Homepage">
       <Navbar/>
       <Hero/>  
@@ -21,13 +24,16 @@ const App = () => {
     </section>
     <section id="Portfolio">
       <Parallax type="portfolio"/>
-    </section>
+    </section> 
     <Portfolio/>
-   
   
-    <section id="Contact"><Contact/></section>
+    <section id="Contact">
+      <Contact/>
+      </section>
     {/* <Test/> */}
-  </div>;
+
+  </div>
+  );
 };
 
 export default App;
