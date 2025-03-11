@@ -53,47 +53,40 @@ const Services = () => {
             </div>
         </motion.div>  
         <motion.div className="listContainer" variants={variants}>
-             <motion.div className="box"  whileHover={{background:"lightgray", color:"black"}}>
-                <h2>Branding</h2>
-                <p>
-                    Lorem ipsum dolor sit amest consectetur adipisicing elit. Nostrum
-                    Libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-                    animi! Ad nam pariatur assumenda quae mollitia libero repellat
-                    explicabo maiores?
-                </p>
-                <button>Go</button>
-             </motion.div>
+        <motion.div className="box" whileHover={{ background: "lightgray", color: "black" }}>
+            <h2>NEXT Website</h2>
+            <p>Simple website using HTML, CSS, and JavaScript</p>
+            <button onClick={() => window.open("https://github.com/nimeshasewmini/NEXT-website", "_blank")}>
+                Go
+            </button>
+        </motion.div>
 
-             <motion.div className="box" whileHover={{background:"lightgray", color:"black"}}>
-                <h2>Branding</h2>
-                <p>
-                    Lorem ipsum dolor sit amest consectetur adipisicing elit. Nostrum
-                    Libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-                    animi! Ad nam pariatur assumenda quae mollitia libero repellat
-                    explicabo maiores?
-                </p>
-                <button>Go</button>
-             </motion.div>
-             <motion.div className="box"whileHover={{background:"lightgray", color:"black"}}>
-                <h2>Branding</h2>
-                <p>
-                    Lorem ipsum dolor sit amest consectetur adipisicing elit. Nostrum
-                    Libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-                    animi! Ad nam pariatur assumenda quae mollitia libero repellat
-                    explicabo maiores?
-                </p>
-                <button>Go</button>
-             </motion.div>
-             <motion.div className="box" whileHover={{background:"lightgray", color:"black"}}>
-                <h2>Branding</h2>
-                <p>
-                    Lorem ipsum dolor sit amest consectetur adipisicing elit. Nostrum
-                    Libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-                    animi! Ad nam pariatur assumenda quae mollitia libero repellat
-                    explicabo maiores?
-                </p>
-                <button>Go</button>
-             </motion.div>
+        <motion.div className="box" whileHover={{ background: "lightgray", color: "black" }}>
+            <h2>QR-Code</h2>
+            <p>Simple QR code generator using python</p>
+            <button onClick={() => window.open("https://github.com/nimeshasewmini/QR-Code", "_blank")}>
+                Go
+            </button>
+        </motion.div>
+
+
+           <motion.div className="box" whileHover={{ background: "lightgray", color: "black" }}>
+            <h2>calculator</h2>
+            <p>create calculator using HTML CSS & JS</p>
+            <button onClick={() => window.open("https://github.com/nimeshasewmini/calculator", "_blank")}>
+                Go
+            </button>
+        </motion.div>
+
+        <motion.div className="box" whileHover={{ background: "lightgray", color: "black" }}>
+            <h2>Quiz App</h2>
+            <p>MERN</p>
+            <button onClick={() => window.open("https://github.com/nimeshasewmini/QuizApp", "_blank")}>
+                Go
+            </button>
+        </motion.div>
+
+
         </motion.div>
 
         </motion.div>
