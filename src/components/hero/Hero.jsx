@@ -33,7 +33,7 @@ const Hero = () => {
         </motion.h2>
 
         <motion.h1 variants={textVariants} initial="initial" animate="animate">
-        Web Developer <br></br><br />
+        Web Developer <br />
           
           {/* Front-End Developer */}
         </motion.h1>
@@ -44,7 +44,11 @@ const Hero = () => {
           animate="animate"
           className="intro-text"
         >
-          I'm <span className="highlight">Nimesha Sewmini </span><br></br>from the University of Vavuniya
+          <br></br>
+          <pre>
+            
+          </pre>
+          I'm <span className="highlight">Nimesha Sewmini </span>from the University of Vavuniya
         </motion.p>
 
         <motion.div
