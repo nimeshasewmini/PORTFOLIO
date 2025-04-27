@@ -1,30 +1,32 @@
-import Sidebar from "../sidebar/Sidebar"
-import "./navbar.scss"
-import {motion} from "framer-motion";
-
+import React from 'react';
+import { Link } from 'react-scroll';
+import './navbar.scss';
 
 const Navbar = () => {
   return (
-    <div className="navbar">
-        {/*Sidebar */}
-        <Sidebar/>
-        <div className="wrapper">
-            <motion.span>Nimesha Sewmini</motion.span>
+    <nav className="navbar">
+      <div className="navbar-container">
+        <h1 className="logo"><Link to="hero" smooth={true} duration={500}>Nimesha Sewmini</Link></h1>
+        <ul className="nav-links">
+          <li>
+            <Link to="hero" smooth={true} duration={500}>Home</Link>
+          </li>
+          <li>
+            <Link to="about" smooth={true} duration={500}>About</Link>
+          </li>
+          <li>
+            <Link to="services" smooth={true} duration={500}>Services</Link>
+          </li>
+          <li>
+            <Link to="portfolio" smooth={true} duration={500}>Portfolio</Link>
+          </li>
+          <li>
+            <Link to="contact" smooth={true} duration={500}>Contact</Link>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  );
+};
 
-            {/* initial={{opacity:0,scale:0.5}}  
-            animate={{opacity:1,scale:1}} 
-            transition={{duration:0.5}} */}
-            <div className="social">
-                <a href="#"><img src="/facebook.png" alt="" /></a>
-                <a href="#"><img src="/instagram.png" alt="" /></a>
-                <a href="#"><img src="/youtube.png" alt="" /></a>
-                <a href="#"><img src="/linkdin.png" alt="" /></a>
-                <a href="#"><img src="/medium.png" alt="" /></a>
-                <a href="#"><img src="/github.png" alt="" /></a>
-            </div>
-        </div>
-    </div>
-  )
-}
-
-export default Navbar
+export default Navbar;

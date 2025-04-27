@@ -1,44 +1,56 @@
 @import "../../app.scss";
 .contact {
     height: 100%;
-    min-width: 100;
+    min-width: 100%;
     margin: auto;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 50px;
     padding: 100px;
+    // Mobile-first approach: flex direction will be column for smaller screens
     @include mobile {
         width: 100%;
-        padding: 0;
+        padding: 30px; // Adjusted padding for mobile
         flex-direction: column;
+        align-items: center;
+        gap: 20px; // Added gap for mobile to improve layout
     }
     .textContainer {
         flex: 1;
         display: flex;
         flex-direction: column;
-        gap: 40px;
+        gap: 20%;
+        // Mobile styling
         @include mobile {
-            gap: 20%;
+            gap: 10px; // Reduced gap for better readability on mobile
             text-align: center;
             align-items: center;
             margin: 50px 0;
-            margin-bottom: 0;
         }
         h1 {
             font-size: 100px;
+            padding-top: 10vh;
             line-height: 88px;
+            // Mobile styling
             @include mobile {
                 font-size: 36px;
                 line-height: 44px;
+                padding-top: 30vh; // Adjust padding for mobile
             }
         }
         h2 {
+            font-size: 30px;
+            padding: 0%;
+            // Mobile styling
             @include mobile {
                 font-size: 20px;
+                padding: 0%;
             }
         }
         span {
             font-weight: 300;
+            // Mobile styling
             @include mobile {
                 font-size: 12px;
             }
@@ -47,19 +59,22 @@
     .formContainer {
         flex: 1;
         position: relative;
-        background-color: rebeccapurple, transparent;
+        background-color: transparent;
         width: 100%;
+        // Mobile styling
         @include mobile {
-            padding: 50px;
+            padding: 20px;
             width: 100%;
+            margin-top: 20px; // Ensure there's some spacing between the text and form on mobile
         }
         .phoneSvg {
             position: absolute;
             margin: auto;
             z-index: -1;
-            stroke: orange;
+            stroke: #3498db;
+            // Mobile styling
             @include mobile {
-                stroke: orange;
+                stroke: #3498db;
                 position: absolute;
                 margin: auto;
                 z-index: -1;
@@ -68,28 +83,108 @@
         form {
             display: flex;
             flex-direction: column;
-            gap: 10px;
-        }
-        input,
-        textarea {
-            padding: 20px;
-            background-color: transparent;
-            border: 1px solid white;
-            color: white;
-            border-radius: 5px;
-            @include mobile {
-                padding: 10px;
+            gap: 10px; // Adjusted gap for form elements
+            // Form element adjustments for mobile view
+            .email,
+            .linkedin {
+                margin-bottom: 5px; // Reduced bottom margin for less space
+            }
+            input,
+            textarea {
+                padding: 20px;
+                background-color: transparent;
+                border: 1px solid white;
+                color: white;
+                border-radius: 5px;
+                // Mobile styling
+                @include mobile {
+                    padding: 12px;
+                    font-size: 14px; // Adjust font size for inputs and textareas
+                    width: 100%; // Make inputs take full width in mobile view
+                }
             }
         }
+        // Button styling
         button {
             padding: 20px;
             border: none;
-            background-color: orange;
+            background-color: #3498db;
             cursor: pointer;
-            text-wrap: 500px;
+            font-size: 16px;
+            margin-top: 10px; // Added margin-top for button spacing
+            // Mobile styling
             @include mobile {
-                padding: 10px;
+                padding: 15px;
+                font-size: 14px; // Smaller font size for mobile
+                width: 100%; // Make the button take full width on mobile
+            }
+            &:hover {
+                background-color: #2980b9;
             }
         }
+    }
+}
+
+
+/* Responsive Design for Tablets and Larger Devices (769px to 1024px) */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .contact {
+        padding: 60px; // Reduced padding for tablets and medium-sized screens
+    }
+    .textContainer {
+        h1 {
+            font-size: 60px;
+            line-height: 72px;
+        }
+        h2 {
+            font-size: 24px;
+        }
+        span {
+            font-size: 14px;
+        }
+    }
+    .formContainer {
+        padding: 40px;
+    }
+    input,
+    textarea {
+        font-size: 16px;
+    }
+    button {
+        padding: 18px;
+        font-size: 15px;
+    }
+}
+
+
+/* Desktop and Larger Devices (min-width: 1025px) */
+
+@media (min-width: 1025px) {
+    .contact {
+        padding: 100px; // Ensure enough padding for large screens
+    }
+    .textContainer {
+        h1 {
+            font-size: 100px;
+            line-height: 88px;
+        }
+        h2 {
+            font-size: 30px;
+        }
+        span {
+            font-size: 16px;
+        }
+    }
+    .formContainer {
+        padding: 50px;
+    }
+    input,
+    textarea {
+        font-size: 18px;
+    }
+    button {
+        padding: 10px;
+        font-size: 16px;
     }
 }

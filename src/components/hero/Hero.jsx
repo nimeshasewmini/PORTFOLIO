@@ -1,41 +1,25 @@
-import { animate } from "framer-motion";
-import "./hero.scss"
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
+import "./hero.scss";
 
-const textVariants={
-  initial:{
-    x: -500,
-    opacity:0,
+const textVariants = {
+  initial: {
+    opacity: 0,
+    y: 100,
   },
-  animate:{
-    x: 0,
-    opacity:1,
-    transition:{
-      duration:1,
-      staggerChildren:0.1,
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1.5,
+      ease: "easeOut",
     },
   },
-  scrollButton:{
-    opacity:0,
-    y:10,
-    transition:{
-      duration:2,
-      repeat:Infinity
-    }
-  }
 };
 
-const sliderVariants={
-  initial:{
-    x: -0,
-  },
-  animate:{
-    x: "-220%",
-    transition:{
-      repeat:Infinity,
-      repeatType:"mirror",
-      duration:20,
-    },
+const buttonVariants = {
+  hover: {
+    scale: 1.1,
+    transition: { duration: 0.3 },
   },
 };
 
@@ -43,31 +27,62 @@ const sliderVariants={
 const Hero = () => {
   return (
     <div className="hero">
-      <div className="wrapper"> 
-        <motion.div 
-          className="textContainer" 
-          variants={textVariants} 
-          initial="initial" 
-          animate="animate" 
+      <div className="hero-content">
+        <motion.h2 variants={textVariants} initial="initial" animate="animate" className="welcome">
+          {/* Welcome! */}
+        </motion.h2>
+
+        <motion.h1 variants={textVariants} initial="initial" animate="animate">
+        Web Developer <br></br><br />
+          
+          {/* Front-End Developer */}
+        </motion.h1>
+
+        <motion.p
+          variants={textVariants}
+          initial="initial"
+          animate="animate"
+          className="intro-text"
         >
-            <motion.h2 variants={textVariants}>Welcome !</motion.h2>
-            <motion.h1 variants={textVariants}>Web Developer and UI Designer</motion.h1>
-            <motion.div variants={textVariants} className="buttons">
-                <motion.button variants={textVariants}>See the Latest Works</motion.button>
-                <motion.button variants={textVariants}>Contact Me</motion.button>
-                </motion.div>
-                <motion.img variants={textVariants} animate="scrollButton" src="scroll.png" alt=""/> 
-               
-        </motion.div>   
-      </div>
-        <motion.div className="slidingTextContainer" variants={sliderVariants} initial="initial" animate="animate"> 
-          Web Developer UI Designer  
+          I'm <span className="highlight">Nimesha Sewmini </span><br></br>from the University of Vavuniya
+        </motion.p>
+
+        <motion.div
+          variants={textVariants}
+          initial="initial"
+          animate="animate"
+          className="buttons"
+        >
+          <motion.button
+            variants={buttonVariants}
+            whileHover="hover"
+            className="btn primary-btn"
+          >
+            <a href="#Portfolio">See the Latest Works</a>
+          </motion.button>
+          <motion.button
+            variants={buttonVariants}
+            whileHover="hover"
+            className="btn secondary-btn"
+          >
+            <a href="#Contact">Contact me</a>
+          </motion.button>
         </motion.div>
-        <div className="imageContainer">
-            <img src="/hero.png" alt=""/>
-        </div>
+
+        <motion.img
+          variants={textVariants}
+          initial="initial"
+          animate="animate"
+          src="scroll.png"
+          alt="scroll"
+          className="scroll-icon"
+        />
+      </div>
+      <div className="hero-image">
+        <img src="/hero.png" alt="Hero" />
+      </div>
     </div>
   );
 };
 
-export default Hero
+export default Hero;

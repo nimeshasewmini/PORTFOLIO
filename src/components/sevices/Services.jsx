@@ -1,96 +1,45 @@
-import { useRef } from "react";
+import React from 'react';
+import { FaLaptopCode, FaServer, FaPencilRuler, FaDatabase } from 'react-icons/fa'; // Add icons
 import "./services.scss";
-import { motion,useInView } from "framer-motion";
 
-const variants={
-    initial:{
-        x:-500,
-        y:100,
-        opacity:0,
-    },
-    animate:{
-        x:0,
-        y:0,
-        opacity:1,
-        transition:{
-            duration:1,
-            staggerChildren:0.1,
-        },
-    },
-    
-};
+const services = [
+  {
+    title: 'Frontend Development',
+    description: 'Building responsive and user-friendly interfaces using React, HTML, CSS, and JavaScript.',
+    icon: <FaLaptopCode />, // Icon for frontend
+  },
+  {
+    title: 'Backend Development',
+    description: 'Developing scalable backend systems with .NET, MySQL, and XAMPP for efficient data management.',
+    icon: <FaServer />, // Icon for backend
+  },
+  {
+    title: 'UI/UX Design',
+    description: 'Designing intuitive user experiences using Figma, Adobe XD, and Adobe Illustrator.',
+    icon: <FaPencilRuler />, // Icon for UI/UX
+  },
+  {
+    title: 'Full-Stack Projects',
+    description: 'Creating full-stack applications like Food Ordering Website and Movie Applications using React, Next.js, and API integration.',
+    icon: <FaDatabase />, // Icon for full-stack
+  },
+];
 
 const Services = () => {
-
-  const ref = useRef()
-
-  const isInView = useInView(ref, {margin:"-100px"})
   return (
-    <motion.div 
-    className="services" 
-    variants={variants} 
-    initial="initial" 
-    //animate="animate"
-    //whileInView="animate"
-    ref={ref}
-    animate={"animate"}
-    >
-        <motion.div className="textContainer" variants={variants}>
-            <p>I focus on helping your brand grow
-            <br/> and move forward</p>
-            <hr/>
-        </motion.div>
-        <motion.div className="titleContainer" variants={variants}>
-            <div className="title">
-                <img src="/people.webp" alt="" />  
-                <h1><motion.b whileHover={{color:"orange"}}>Unique </motion.b>Ideas
-                </h1>
-            </div>
-            <div className="title"> 
-                <h1><motion.b whileHover={{color:"orange"}}>For You </motion.b>Business.
-                </h1>
-                <button>WHAT WE DO?</button>
-            </div>
-        </motion.div>  
-        <motion.div className="listContainer" variants={variants}>
-        <motion.div className="box" whileHover={{ background: "lightgray", color: "black" }}>
-            <h2>NEXT Website</h2>
-            <p>Simple website using HTML, CSS, and JavaScript</p>
-            <button onClick={() => window.open("https://github.com/nimeshasewmini/NEXT-website", "_blank")}>
-                Go
-            </button>
-        </motion.div>
-
-        <motion.div className="box" whileHover={{ background: "lightgray", color: "black" }}>
-            <h2>QR-Code</h2>
-            <p>Simple QR code generator using python</p>
-            <button onClick={() => window.open("https://github.com/nimeshasewmini/QR-Code", "_blank")}>
-                Go
-            </button>
-        </motion.div>
-
-
-           <motion.div className="box" whileHover={{ background: "lightgray", color: "black" }}>
-            <h2>calculator</h2>
-            <p>create calculator using HTML CSS & JS</p>
-            <button onClick={() => window.open("https://github.com/nimeshasewmini/calculator", "_blank")}>
-                Go
-            </button>
-        </motion.div>
-
-        <motion.div className="box" whileHover={{ background: "lightgray", color: "black" }}>
-            <h2>Quiz App</h2>
-            <p>MERN</p>
-            <button onClick={() => window.open("https://github.com/nimeshasewmini/QuizApp", "_blank")}>
-                Go
-            </button>
-        </motion.div>
-
-
-        </motion.div>
-
-        </motion.div>
+    <section id="services" className="services-section">
+      <h2 className="section-title">My Services</h2>
+      <div className="services-container">
+        {services.map((service, index) => (
+          <div className="service-card" key={index}>
+            <div className="service-icon">{service.icon}</div>
+            <h3>{service.title}</h3>
+            <p>{service.description}</p>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 };
 
-export default Services  
+export default Services;
