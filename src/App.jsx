@@ -1,5 +1,6 @@
 import React from 'react';
-import './app.scss';
+import "./app.scss";
+
 import Hero from './components/hero/Hero';
 import Navbar from './components/navbar/Navbar';
 import Parallax from './components/Parallax/Parallax';
