@@ -13,7 +13,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <h1 className="logo">
-          <Link to="hero" smooth={true} duration={500}>Nime</Link>
+          <Link to="hero" smooth={true} duration={500}><img src="./logo.png" alt="" /></Link>
         </h1>
         <div className={`nav-toggle ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
           <span className="bar"></span>

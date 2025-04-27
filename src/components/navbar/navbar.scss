@@ -29,6 +29,12 @@ sans-serif;
         &:hover {
             color: $primary-color;
         }
+        img {
+            width: 90px;
+            height: auto;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
     }
     .nav-toggle {
         display: none;
