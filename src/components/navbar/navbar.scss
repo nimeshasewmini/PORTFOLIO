@@ -6,11 +6,14 @@ sans-serif;
 .navbar {
     width: 100%;
     background-color: $secondary-color;
-    padding: 20px 0;
+    padding: 10px 0;
+    /* Reduced padding */
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
+    transition: top 0.3s ease;
+    /* Add smooth transition for hide/show effect */
     .navbar-container {
         display: flex;
         justify-content: space-between;
@@ -22,7 +25,8 @@ sans-serif;
     }
     .logo {
         color: white;
-        font-size: 2rem;
+        font-size: 1.5rem;
+        /* Reduced font size */
         font-family: $font-family;
         cursor: pointer;
         transition: color 0.3s ease;
@@ -30,7 +34,8 @@ sans-serif;
             color: $primary-color;
         }
         img {
-            width: 90px;
+            width: 70px;
+            /* Smaller logo */
             height: auto;
             display: inline-block;
             transition: transform 0.3s ease;
@@ -40,11 +45,12 @@ sans-serif;
         display: none;
         flex-direction: column;
         justify-content: space-around;
-        height: 25px;
-        width: 30px;
+        height: 20px;
+        /* Smaller toggle */
+        width: 25px;
         cursor: pointer;
         span {
-            width: 25px;
+            width: 20px;
             height: 3px;
             background-color: white;
             transition: 0.3s ease;
@@ -55,11 +61,14 @@ sans-serif;
         list-style-type: none;
         margin: 0;
         padding: 0;
+        cursor: pointer;
         li {
-            margin: 0 20px;
+            margin: 0 15px;
+            /* Smaller margin */
             a {
                 color: white;
-                font-size: 1rem;
+                font-size: 0.9rem;
+                /* Smaller font size */
                 text-decoration: none;
                 text-transform: uppercase;
                 font-family: $font-family;
@@ -76,7 +85,8 @@ sans-serif;
         }
         .nav-links {
             position: absolute;
-            top: 80px;
+            top: 60px;
+            /* Adjusted for smaller navbar */
             left: 0;
             width: 100%;
             background-color: $secondary-color;
@@ -90,7 +100,8 @@ sans-serif;
                 transform: translateX(0);
             }
             li {
-                margin: 20px 0;
+                margin: 15px 0;
+                /* Smaller margin */
             }
         }
     }

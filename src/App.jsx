@@ -13,7 +13,7 @@ import About from './components/About/About';
 const App = () => {
   return (
     <div>
-      <Cursor />
+      {/* <Cursor /> */}
 
       {/* Homepage Section */}
       <section id="Homepage">
