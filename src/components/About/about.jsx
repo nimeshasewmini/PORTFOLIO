@@ -27,7 +27,7 @@ const About = () => {
             </p>
           </div>
           <div className="col-lg-6">
-            <img src="/nimesha.jpg" alt="Nimesha Sewmini" className="img-fluid" />
+            <img src="/nimesha.jpg" alt="Nimesha" className="img-fluid" />
           </div>
         </div>
       </div>
