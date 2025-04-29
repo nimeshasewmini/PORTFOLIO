@@ -23,7 +23,7 @@ const About = () => {
               I'm passionate about continuous learning and have completed several online courses to sharpen my skills, including React, Frontend Development, Python, Java, and UI/UX Design.
             </p>
             <p>
-              Feel free to connect with me via <a href="https://www.linkedin.com/in/nimeshasewmini/">LinkedIn</a> or check out my projects on <a href="https://github.com/nimeshasewmini">GitHub</a>. I'm excited to collaborate on innovative projects and explore new opportunities!
+              Feel free to connect with me via <a href="https://www.linkedin.com/in/nimesha-sewmini-983706285/">LinkedIn</a> or check out my projects on <a href="https://github.com/nimeshasewmini">GitHub</a>. I'm excited to collaborate on innovative projects and explore new opportunities!
             </p>
           </div>
           <div className="col-lg-6">
