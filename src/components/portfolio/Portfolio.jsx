@@ -4,28 +4,35 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
 const items = [
   {
-    id: 1,
-    title: "Nilame Vacation Website",
-    img: "/nilame.png",
-    alt: "nilame vacation",
-    desc: "Developed a responsive multi-page website about Kandy city using HTML and CSS, featuring sections on destinations, hotels, and contact information.",
+      id: 1,
+      title: "Nilame Vacation Website",
+      img: "/nilame.png",
+      alt: "nilame vacation",
+      desc:"Nilame Vacations is a responsive travel website that showcases holiday packages, featured destinations, and booking options through a clean, user-friendly interface. Built with modern web technologies, it highlights front-end development skills and offers an engaging platform for planning vacations. ",
   },
   {
     id: 2,
+    title: "Kandy Website",
+    img: "/kandy.png",
+    alt: "kandy website",
+    desc: "Developed a responsive multi-page website about Kandy city using HTML and CSS, featuring sections on destinations, hotels, and contact information.",
+  },
+  {
+    id: 3,
     title: "Movie App",
     img: "/movie.png",
     alt: "movie website",
     desc: "Fetched and displayed real-world movie data from an API using React. Implemented search functionality and responsive design for mobile devices.",
   },
   {
-    id: 3,
+    id: 4,
     title: "Coffee Shop Website",
     img: "/coffee.png",
     alt: "coffee shop website",
     desc: "Built a responsive single-page coffee shop website using HTML, CSS, and JavaScript. Implemented interactive features to enhance user engagement.",
   },
   {
-    id: 4,
+    id: 5,
     title: "Next Website",
     img: "/Next.png",
     alt: "next website",
